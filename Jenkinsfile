@@ -1,4 +1,10 @@
 node {
+    properties([
+  	    parameters([
+  		    booleanParam(name: 'fromParent', defaultValue: false)
+  	    ])
+    ])
+    
     try {
         stage('Checkout') {
             checkout scm
