@@ -5,6 +5,8 @@ node {
   	    ])
     ])
     
+    String dummyVar = "dummy"
+    
     try {
         stage('Checkout') {
             checkout scm
