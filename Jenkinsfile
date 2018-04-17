@@ -13,10 +13,6 @@ node {
             checkout scm
         }
         
-        stage('List env variables') {
-            sh 'printenv'   
-        }
-
         stage('List workspace') {
             sh 'ls -laht ${WORKSPACE}'
         }
