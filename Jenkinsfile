@@ -6,6 +6,7 @@ node {
     ])
     
     String dummyVar = "dummy"
+    env.DUMMY_VAR = dummyVar
     
     try {
         stage('Checkout') {
