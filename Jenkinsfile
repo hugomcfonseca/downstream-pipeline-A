@@ -6,6 +6,7 @@ node {
     ])
     
     env.AFRAMZ_BUILD_ID = env.BUILD_ID
+    env.JOB_NAME = env.BRANCH_NAME
     
     try {
         stage('Checkout') {
