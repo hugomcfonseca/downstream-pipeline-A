@@ -5,12 +5,15 @@ node {
   	    ])
     ])
     
-    String dummyVar = "dummy"
-    env.DUMMY_VAR = dummyVar
+    env.AFRAMZ_BUILD_ID = env.BUILD_ID
     
     try {
         stage('Checkout') {
             checkout scm
+        }
+        
+        stage('List env variables') {
+            sh 'printenv'   
         }
 
         stage('List workspace') {
